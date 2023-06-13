@@ -1,0 +1,648 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;700&display=swap");
+
+:root {
+  --green: #27ae60;
+  --balck: #2c2c54;
+}
+
+* {
+  font-family: "Nunito Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+  outline: none;
+  border: none;
+  background-blend-mode: darken;
+}
+
+*::selection {
+  background: var(--green);
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6.5rem;
+  scroll-behavior: smooth;
+}
+
+.header-1 {
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+}
+
+.logo {
+  font-size: 3em;
+  font-weight: bolder;
+  color: var(--balck);
+}
+
+.logo i {
+  padding-right: 0.5rem;
+  color: var(--green);
+}
+
+.header-1 .search-box-container {
+  display: flex;
+  height: 5rem;
+}
+
+.header-1 .search-box-container #search-box {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #333;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  text-transform: none;
+}
+
+.header-1 .search-box-container label {
+  height: 100%;
+  width: 8rem;
+  font-size: 2.5rem;
+  line-height: 5rem;
+  color: #fff;
+  background: #27ae60;
+  text-align: center;
+  cursor: pointer;
+}
+
+.header-2 {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.header-2.active {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+.header-2 .navbar a {
+  font-size: 2rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  color: var(--balck);
+  font-weight: bold;
+}
+
+.header-2 .navbar a:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+.header-2 .icons a {
+  font-size: 2.5rem;
+  color: var(--balck);
+  padding-left: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.header-2 .icons a:hover {
+  color: var(--green);
+}
+
+#menu-bar {
+  font-size: 3rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--balck);
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  color: var(--balck);
+  display: none;
+}
+
+/* Slider section starts*/
+
+section {
+  padding: 2rem 9%;
+}
+
+/* section:nth-child(even) {
+  background: #eee;
+} */
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: #fff;
+  background: var(--balck);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.8rem 3rem;
+}
+
+.btn:hover {
+  background: var(--green);
+  letter-spacing: 0.1rem;
+  color: white;
+}
+
+.home .home-slider .slide {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 9rem;
+}
+
+.home .home-slider .slide .content {
+  flex: 1 1 45rem;
+}
+
+.home .home-slider .slide .image {
+  flex: 1 1 45rem;
+}
+
+.home .home-slider .slide .image img {
+  width: 100%;
+}
+
+.home .home-slider .slide .content span {
+  color: var(--green);
+  font-size: 2.5rem;
+}
+
+.home .home-slider .slide .content h3 {
+  color: var(--black);
+  font-size: 7rem;
+}
+
+.home .home-slider .slide .content p {
+  color: var(--light-color);
+  font-size: 2.2rem;
+  padding: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--green);
+}
+
+/* Slider section ends*/
+
+/* Flash sales section begins*/
+
+.banner-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.banner-container .banner{
+    flex: 1 1 40rem;
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-container .banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-container .banner .content{
+    position: absolute;
+    top: 30%; left: 5%;
+    transform: translateY(-50%);
+}
+
+.banner-container .banner .content h3{
+    font-size: 3rem;
+    color: #333;
+}
+
+.banner-container .banner .content p{
+    font-size: 2rem;
+    color: #333;
+}
+
+.banner-container .banner:hover img{
+    transform: scale(1.5) rotate(-5deg);
+}
+
+
+/* Flash sales section ends*/
+
+/* category section starts*/
+.heading{
+  text-align: center;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: var(--balck);
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+.heading span{
+  color: var(--green);
+  text-transform: uppercase;
+}
+
+.category .box-container{
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.category .box-container .box{
+  border: .1rem solid rgba(0, 0, 0, 0.3);
+  border-radius: .5rem;
+  text-align: center;
+  padding: 2rem;
+  flex: 1 1 25rem;
+}
+.category .box-container .box img{
+  width: 20rem;
+  margin: .5rem 0;
+}
+
+.category .box-container .box h3{
+  font-size: 3.5rem;
+  color: var(--balck);
+}
+
+.category .box-container .box p{
+  font-size: 2rem;
+  color: #666;
+  padding: .5rem 0;
+}
+
+.category .box-container .box .btn{
+ display: block;
+}
+
+/* category section ends*/
+
+/*Products sections starts*/
+.products .box-container{
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.products .box-container .box{
+  flex: 1 1 30rem;
+  text-align: center;
+  overflow: hidden;
+  padding: 2rem;
+  border: .1rem solid rgba(0, 0, 0, 0.3);
+  border-radius: .5rem;
+  position: relative;
+}
+
+.products .box-container .box img{
+  height: 20rem;
+}
+
+.products .box-container .box .discount{
+  position: absolute;
+  top: 1rem; left: 1rem;
+  background: rgba(0, 255, 0, .1);
+  padding: .7rem 1rem;
+  color: var(--green);
+  font-size: 2rem;
+}
+
+.products .box-container .box .icons{
+  position: absolute;
+  top: .5rem; right: -6rem;
+}
+.products .box-container .box:hover .icons{
+  right: 1rem;
+}
+
+.products .box-container .box .icons a{
+  display: block;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+  color: var(--balck);
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  margin-top: .7rem;
+}
+
+.products .box-container .box .icons a:hover{
+  color: #fff;
+  background: var(--green);
+}
+
+.products .box-container .box h3{
+  color: var(--balck);
+  font-size: 2.5rem;
+}
+
+.products .box-container .box .stars i{
+  padding: 1rem .1rem;
+  font-size: 1.7rem;
+  color: gold;
+}
+
+.products .box-container .box .price{
+  font-size: 2rem;
+  color: var(--balck);
+  padding: -5rem 0;
+}
+
+.products .box-container .box .price span{
+  font-size: 1.5rem;
+  color: #999;
+  text-decoration: line-through;
+
+}
+
+.products .box-container .box .quantity{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+}
+
+.products .box-container .box .quantity span{
+  font-size: 1.7rem;
+  padding: 0 0.7rem;
+}
+
+.products .box-container .box .quantity input{
+  border: .1rem solid rgba(0, 0, 0, 0.3);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: var(--balck);
+  padding: .5rem;
+  background: rgba(0, 0, 0, 0.05);
+
+}
+
+.products .box-container .box .btn{
+  display: block;
+}
+
+/*Products sections ends*/
+
+
+/*deals section starts*/
+
+.deal{
+  background: url(images/deal-1.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.deal .content{
+  max-width: 50rem;
+}
+
+.deal .content .title{
+  font-size: 4rem;
+  color: var(--balck);
+}
+
+.deal .content p{
+  font-size: 1.7rem;
+  padding: 1rem 0;
+  color: #333;
+}
+
+.deal .content .count-down{
+  display: flex;
+  padding: .5rem 0;
+  gap: 1rem;
+
+}
+
+.deal .content .count-down .box{
+  width: 9rem;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: .1rem solid rgba(0, 0, 0, 0.3);
+}
+
+.deal .content .count-down .box h3{
+  font-size: 5rem;
+  color: var(--balck);
+  background: #fff;
+  height: 7rem;
+  line-height: 7rem;
+  width: 100%;
+}
+
+.deal .content .count-down .box span{
+  display: block;
+  width: 100%;
+  background: var(--balck);
+  color: #fff;
+  font-size: 2rem;
+}
+
+/*deals section ends*/
+
+/*contact section starts*/
+
+.contact form{
+  text-align: center;
+  padding: 2rem;
+  border:.1rem solid rgba(0, 0, 0, 0.3);
+}
+
+ .contact form .inputBox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .inputBox input, textarea{
+  text-transform: none;
+  font-size: 1.7rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: #f7f7f7;
+  border: .1rem solid rgba(0, 0, 0, 0.3);
+  width: 49%;
+}
+
+.contact form textarea{
+  width: 100%;
+  height: 20rem;
+  resize: none;
+}
+/*contact section ends*/
+
+/*footer section starts*/
+
+.footer .box-container{
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+  padding: 1rem 0;
+  flex: 1 1 25rem;
+}
+
+.footer .box-container .box .share a{
+padding: 0;
+width: 4rem;
+height: 4rem;
+line-height: 4rem;
+text-align: center;
+}
+
+.footer .box-container .box h3{
+  font-size: 2.5rem;
+  color: var(--balck);
+}
+
+.footer .box-container .box h3{
+  font-size: 2.5rem;
+  color: #666;
+  padding: .7rem 0;
+}
+.footer .box-container .box .links{
+  padding: 1rem 0;
+}
+
+.footer .box-container .box .links a{
+  display: block;
+  padding: .5rem 0;
+  font-size: 1.7rem;
+  color: #333;
+}
+
+.footer .box-container .box .links a:hover{
+  text-decoration: underline;
+  color: var(--green);
+}
+
+/*footer section starts*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* media query*/
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  .header-1 .header-2 {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-bar {
+    display: initial;
+  }
+
+  .header-2 .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--balck);
+    padding: 1rem 2rem;
+    display: none;
+  }
+  .header-2 .navbar.active {
+    display: initial;
+  }
+
+  .header-2 .navbar a {
+    font-size: 2.5rem;
+    padding: 1rem;
+    background: #fff;
+    display: block;
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+
+  .home .home-slider .slide .content h3 {
+    font-size: 5rem;
+  }
+
+  body {
+    height: 200rem;
+  }
+
+  .deal{
+    background-position:left;
+  }
+  .deal .content{
+    max-width: 100%;
+    text-align: center;
+  }
+  .deal .content .count-down{
+    justify-content: center;
+  }
+
+  .contact form .inputBox input{
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .heading{
+    font-size: 3rem;
+  }
+
+  .header-1 {
+    flex-flow: column;
+  }
+
+  .header-1 .search-box-container {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .logo {
+    font-size: 4rem;
+  }
+  .deal .content .count-down .box h3{
+    font-size: 4rem;
+  }
+
+  .deal .content .count-down .box span{
+    font-size: 1.5rem;
+  }
+}
